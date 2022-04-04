@@ -19,12 +19,6 @@ function App() {
         </form>
         <button id="resetBtn">RESET</button>
       </div>
-
-      {/* {!result ? (
-        <span></span>
-      ) : (
-        <span className="resultcontainer">{result}</span>
-      )} */}
     </>
   );
 }
