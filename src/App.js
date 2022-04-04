@@ -1,58 +1,30 @@
-import { useState } from "react";
 import "./App.css";
 
 function App() {
-  const [name, setName] = useState("");
-  const [mail, setMail] = useState("");
-  const [result, setresult] = useState("");
-
-  const resetResult = () => {
-    setresult("");
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setresult(`NOM : ${name}  / MAIL : ${mail}`);
-    setMail("");
-    setName("");
-  };
-
   return (
     <>
       <div className="containerForm">
-        <form onSubmit={handleSubmit}>
+        <form>
           <div className="inputWithLabel">
             <label htmlFor="name">name</label>
-            <input
-              type="text"
-              id="name"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-            />
+            <input type="text" id="name" />
           </div>
           <div className="inputWithLabel">
             <label htmlFor="mail">Email</label>
-            <input
-              type="email"
-              id="mail"
-              value={mail}
-              onChange={(e) => setMail(e.target.value)}
-            />
+            <input type="email" id="mail" />
           </div>
           <button type="submit" id="send">
             ENVOYER
           </button>
         </form>
-        <button onClick={resetResult} id="resetBtn">
-          RESET
-        </button>
+        <button id="resetBtn">RESET</button>
       </div>
 
-      {!result ? (
+      {/* {!result ? (
         <span></span>
       ) : (
         <span className="resultcontainer">{result}</span>
-      )}
+      )} */}
     </>
   );
 }
